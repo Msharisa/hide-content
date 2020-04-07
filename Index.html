@@ -51,7 +51,82 @@
 				<br />
 		</ol>
 	
+<style>
 
+
+
+body {
+
+}
+
+img
+{
+	border: 6px solid #2a5298;
+	border-radius: 4px;
+	width: 100%;
+	max-width: 250px;
+	height: auto;
+}
+
+ul
+{
+	list-style: disc;
+}
+
+.Col
+{
+	background:#1276af;
+	color: white;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	padding: 25px;
+	width: 300px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+
+.active, .collapsible:hover
+{
+  background: linear-gradient( #cb356b, #bd3f32);
+}
+
+.content
+{
+  padding: 0 18px;
+  display: none;
+  overflow: auto;
+  background-color: #feb47b;
+  width: 264px;
+  
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+var collapsed = document.getElementsByClassName("Col");
+
+var i;
+
+for (i = 0; i < collapsed.length; i++)
+{
+  collapsed[i].addEventListener("click", function() {
+	this.classList.toggle("active");
+	var content = this.nextElementSibling;
+	if (content.style.display === "block") {
+	  content.style.display = "none";
+	}
+	
+	else
+	{
+	  content.style.display = "block";
+	}
+  });
+}
+</script>
 	
 	</body>
 </html>
